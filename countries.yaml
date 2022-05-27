@@ -1,0 +1,20 @@
+---
+countries:
+  "UK":
+    regions:
+      - South West
+      - South East
+      - East Midlands
+      - West Midlands
+      - Scotland
+      - Wales
+      - North West
+      - North East
+      - Northern Ireland
+  "Ireland":
+    regions:
+      - Leinster
+      - Munster
+      - Connaught
+
+

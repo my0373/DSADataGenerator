@@ -1,0 +1,43 @@
+10 Meters
+20 Meters
+40 Meters
+60 Meters
+100 Meters
+200 Meters
+4*60 Meters Shuttle
+4*100 Meters Relay
+Shot
+Discus
+Javelin
+Tennis Ball
+Cricket Ball
+Frisbee
+Powerlifting
+Basketball- Senior
+Basketball- Junior
+Cycling
+Shooting
+Table Tennis- Senior
+Table Tennis - Junior
+Hockey Senior
+Hockey Junior
+New Age Curling
+Balance Bikes
+Width with float
+Width
+Freestyle- 25 Meters
+Freestyle- 50 Meters
+Freestyle- 100 Meters
+Breaststroke- 25 Meters
+Breaststroke- 50 Meters
+Breaststroke- 100 Meters
+Backstroke- 25 Meters
+Backstroke- 50 Meters
+Butterfly- 25 Meters
+Butterfly- 50 Meters
+Medley- 25 Meters * 4
+Junior Football
+Senior Football
+Intro to throwing
+Football (Under 9s)
+Freestyle Relay
