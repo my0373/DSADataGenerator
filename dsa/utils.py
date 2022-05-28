@@ -1,7 +1,8 @@
 import random
 from datetime import datetime, timedelta
 import yaml
-from pprint import pprint
+# from pprint import pprint
+from dateutil.relativedelta import relativedelta
 
 
 class DSADataGen():
@@ -100,7 +101,7 @@ class DSADataGen():
     def _getDateOfBirth(self, min_age, max_age):
         days_to_subtract = random.randint(min_age, max_age)
         dob = datetime.now() - timedelta(days=days_to_subtract)
-        return dob.date().isoformat()
+        return dob.date()
 
     def _loadYaml(self, filename):
         with open(filename, "r") as stream:
@@ -111,6 +112,14 @@ class DSADataGen():
             return random.choice(list(self.maleNames))
         else:
             return random.choice(list(self.femaleNames))
+
+    def getAge(self, dob):
+
+        rdob = datetime.strptime(dob, "%Y-%m-%d")
+        today = datetime.today()
+        delta = today - rdob
+        rdelta = relativedelta(today, rdob)
+        return rdelta.years
 
     def getRandomFamilyName(self):
         fn = random.choice(list(self.familyNames))
@@ -123,7 +132,9 @@ class DSADataGen():
         self.familyname = self.getRandomFamilyName()
         self.athlete["name"] = "{} {}".format(self.forename, self.familyname)
         self.athlete["sex"] = self.sex
-        self.athlete["dob"] = self.getRandomDOB()
+        self.athlete["dob"] = self.getRandomDOB().isoformat()
+        self.athlete["age"] = self.getAge(self.athlete["dob"])
+        # print(self.athlete["dob"], self.athlete["age"])
         self.athlete["category"] = self.getRandomCategory()
         self.athlete["country"] = self.getRandomCountry()
         self.athlete["region"] = self.getRandomRegion()
