@@ -154,3 +154,7 @@ class DSADataGen():
                 self.athletes[column].append(value)
 
         return self.athletes
+
+
+class DSADataToken():
+    pass
