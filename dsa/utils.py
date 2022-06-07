@@ -11,11 +11,11 @@ class DSADataGen():
     """
 
     def __init__(self,
-                 maleNameFile='malenames.txt',
-                 femaleNameFile='femalenames.txt',
-                 familyNameFile='familynames.txt',
-                 countryFile='countries.yaml',
-                 eventsFile='events.txt'):
+                 maleNameFile='./datasets/malenames.txt',
+                 femaleNameFile='./datasets/femalenames.txt',
+                 familyNameFile='./datasets/familynames.txt',
+                 countryFile='./datasets/countries.yaml',
+                 eventsFile='./datasets/events.txt'):
 
         self.familyname = ""
         self.eventsFile = eventsFile
@@ -134,7 +134,6 @@ class DSADataGen():
         self.athlete["sex"] = self.sex
         self.athlete["dob"] = self.getRandomDOB().isoformat()
         self.athlete["age"] = self.getAge(self.athlete["dob"])
-        # print(self.athlete["dob"], self.athlete["age"])
         self.athlete["category"] = self.getRandomCategory()
         self.athlete["country"] = self.getRandomCountry()
         self.athlete["region"] = self.getRandomRegion()

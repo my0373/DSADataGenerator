@@ -1,0 +1,9 @@
+{
+    "python.formatting.provider": "autopep8",
+    "cSpell.words": [
+        "dateutil",
+        "familyname",
+        "readfile",
+        "relativedelta"
+    ]
+}
